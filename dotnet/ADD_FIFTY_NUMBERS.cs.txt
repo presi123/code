@@ -1,0 +1,15 @@
+﻿namespace ADD_FIFTY_NUMBERS
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int n = 0;
+            for(int i=1; i<=50; i++)
+            {
+                n += i;
+            }
+            Console.WriteLine("the total is= "+n);
+        }
+    }
+}

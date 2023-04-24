@@ -1,0 +1,10 @@
+﻿namespace ARITHMETIC_OPERATIONS
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Hello, World!");
+        }
+    }
+}

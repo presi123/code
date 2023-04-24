@@ -1,0 +1,23 @@
+﻿using System.Drawing;
+
+namespace DELEGATE_DEMO
+{
+    public delegate int mydelegate(int x, int y);
+    class sample
+    {
+        public static int rectangle(int a,int b)
+        {
+            return a * b;
+
+        }
+    }
+   class Program
+    {
+        static void Main(string[] args)
+        {
+            mydelegate d=new mydelegate(sample.rectangle);
+            Console.WriteLine("the area of the rectangle is {0}",d(2,4));
+            Console.ReadKey();
+        }
+    }
+}

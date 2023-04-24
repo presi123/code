@@ -1,0 +1,23 @@
+﻿namespace SEALEDCLASS
+{
+    public sealed class baseclass
+    {
+        public void display()
+        {
+            Console.WriteLine("sealed class cannot be inherited");
+        }
+    }
+    /* public class derived : baseclass
+     {
+         //can't be inherited
+     }
+    */
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            baseclass b = new baseclass();
+            b.display();
+        }
+    }
+}

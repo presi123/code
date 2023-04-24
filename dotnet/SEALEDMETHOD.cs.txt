@@ -1,0 +1,35 @@
+﻿namespace SEALEDMETHOD
+{
+    public class baseclass
+    {
+        public virtual void display()
+        {
+            Console.WriteLine("virtual method");
+        }
+    }
+    public class derived : baseclass
+    {
+            public sealed override void display()
+            {
+                Console.WriteLine("sealed method");
+            }
+     
+    }
+    public class third : derived
+    {
+       /* public override void display()
+        {
+            Console.WriteLine("error...!");
+        }
+       */
+    }
+   internal class Program
+    {
+        static void Main(string[] args)
+        {
+            derived d= new derived();
+            d.display();
+           
+        }
+    }
+}
