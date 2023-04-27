@@ -1,0 +1,57 @@
+<html>
+    <body align="center">
+        <form  oninput="result.value=age.value">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+            <label for="dob">Date Of Birth:</label>
+            <input type="date" id="dob" required>
+            <div id="age-Range">
+                <label for="age">Age:</label>
+                <input type="range" id="age" min="18" max="40" step="2" required>
+                <output for="age" name="result" id="result">18</output>
+            </div>
+            <div id="email-gp">
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+            </div>
+            <div id="website-gp">
+                <label for="Website">Website:</label>
+                <input type="url" id="website" required>
+            </div>
+            <button type="submit">Sign Up</button>
+        </form>
+        <script>
+            const ageRange=document.getElementById("age-Range");
+            const emailGp=document.getElementById("email-gp");
+            const websiteGp=document.getElementById("website-gp");
+            ageRange.style.display="none";
+            emailGp.style.display="none";
+            websiteGp.style.display="none";
+            document.getElementById("dob").addEventListener('change',function(){
+                var age=calculateAge(this.value);
+                if(age<18)
+                {
+                    ageRange.style.display="none";
+                    emailGp.style.display="none";
+                    websiteGp.style.display="none";
+                }
+                else if(age>=18 && age<25){
+                    ageRange.style.display="block";
+                    emailGp.style.display="block";
+                    websiteGp.style.display="none";
+                }
+                else{
+                    ageRange.style.display="block";
+                    emailGp.style.display="block";
+                    websiteGp.style.display="block";
+                }
+            });
+            function calculateAge(birthday){
+                let date=new Date();
+                let birth=new Date(birthday)
+                let age=date.getFullYear()-birth.getFullYear();
+                return age;
+            }
+        </script>
+    </body>
+</html>
