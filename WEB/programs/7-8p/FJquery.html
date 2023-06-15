@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>First JQuery Script</title>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+  </script>
+  <script type="text/javascript" language="javascript">
+   $(document).ready(function(){
+   $("p").on({
+   mouseenter:function(){
+    $(this).css("background-color","lightgray");
+   },
+   mouseleave:function(){
+   $(this).css("background-color","cyan");
+   },
+   click:function(){
+   $(this).css("background-color","tomato");
+   }
+   });
+  });
+  </script>
+ </head>
+ <body>
+  <h1>JQUERY SCRIPT EXECUTION</h1>
+  <p>Click And Move The Pointer To See Changes</p>
+ </body>
+</html>
