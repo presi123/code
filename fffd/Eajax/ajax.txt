@@ -1,0 +1,1 @@
+Ajax is a set of technologies to create fast and dynamic web pages

@@ -1,0 +1,61 @@
+<html>
+<head>
+	<title> Forms in HTML </title>
+	<style>
+
+	body{
+		background-color:lightgrey;
+		}
+	.heighttext{
+			padding: 20px 10px; 
+			line-height: 28px;
+			font-size: 15px;
+	}
+	
+	</style>
+</head>
+<body>
+	<h3 style="background-color:#826464; color:white" align="center"> Student Registration Form </h3>
+	<div id = "reg-form">
+		<form action="login.html"  method=" ">
+			<label for="first-name"> First Name:</label>
+			<input type="text" name="first-name" placeholder="Aryya" autofocus required ><br><br>
+			
+			<label for="last-name"> Last Name:</label>
+			<input type="text" name="last-name" placeholder="Paul" required><br><br>
+			
+			<label for="email"> Email:</label>
+			<input type="email" name="email" placeholder="xyz@gmail.com" required><br><br>
+		
+			<label for="mobile_number">Mobile:</label>
+        		<input type="tel" name="mobile_number" id="phone" placeholder="only 10 digits are allowed" pattern="[0-9]{10}" required><br><br>			
+
+			
+			<label for="gender-choice"> Gender:</label>
+			<input type="radio" name="gender-choice" value="choice-1">
+			<label for="gender-male"> Male:</label>
+			<input type="radio" name="gender-choice" value="choice-2">
+			<label for="gender-female"> Female:</label>
+			<input type="radio" name="gender-choice" value="choice-3">
+			<label for="others"> Others:</label>
+			<br><br>			
+		
+		 	
+			<label for="birth_date"> DOB:</label>
+			<input type="date" name="birth_date" placeholder="2019-04-15" id="mydate"><br><br>
+
+			<label for="address"> Address:</label>
+			<input class="heighttext" type="text" name="address"  size="30" required>
+		</div>
+			<input type ="checkbox" name="agree"> 
+			<label for="agree"> I agree to all the conditions of the form</label><br><br>
+			
+
+			<button type="submit"> Submit </button>
+			
+		</form>
+	</div>
+
+</body>
+
+</html>

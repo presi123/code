@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Temperature Converter</title>
+	<style>
+		body {
+            background: linear-gradient(to bottom right, blue, pink);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+		}
+		
+		#converter {
+			border: 1px solid #ccc;
+			background-color: #fff;
+			padding: 20px;
+			margin: 20px;
+			width: 300px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+		}
+		
+		input[type="number"] {
+			width: 100%;
+			padding: 10px;
+			margin-bottom: 10px;
+			box-sizing: border-box;
+		}
+		
+		button {
+			padding: 10px;
+			background-color: #4CAF50;
+			color: #fff;
+			border: none;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<div id="converter">
+		<h1 style="text-align: center">Temperature Converter</h1>
+		<input type="number" id="inputTemp" placeholder="Enter temperature" required>
+		From:
+		<select id="inputUnit">
+			<option value="celsius">Celsius</option>
+			<option value="fahrenheit">Fahrenheit</option>
+		</select><br>
+		To:
+		<select id="outputUnit">
+			<option value="celsius">Celsius</option>
+			<option value="fahrenheit">Fahrenheit</option>
+		</select><br>
+
+		<button onclick="convert()">Convert</button>
+		<div id="output"></div>
+	</div>
+	
+	<script>
+		function convert() {
+			let inputTemp = document.getElementById("inputTemp").value;
+			let inputUnit = document.getElementById("inputUnit").value;
+			let outputUnit = document.getElementById("outputUnit").value;
+			let outputTemp;
+			var msgstr;
+			if (inputUnit === "celsius" && outputUnit === "fahrenheit") {
+				outputTemp = (inputTemp * 9/5) + 32;
+                msgstr=inputTemp + " " + inputUnit+ "=" + outputTemp + " " + outputUnit +"\n";
+			} else if (inputUnit === "fahrenheit" && outputUnit === "celsius") {
+				outputTemp = (inputTemp - 32) * 5/9;
+                msgstr=inputTemp + " " + inputUnit+ "=" + outputTemp + " " + outputUnit +"\n";
+			} else {
+				outputTemp=inputTemp;
+               msgstr="Choose a valid unit for coversion";
+			}
+			alert (msgstr);
+
+			
+		}
+	</script>
+</body>
+</html>
+
