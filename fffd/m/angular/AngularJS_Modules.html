@@ -1,0 +1,18 @@
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<body>
+<!--// adding a controller-->
+<div ng-app="myApp" ng-controller="myCtrl"> 
+
+{{ firstName + " " + lastName }}
+</div>
+
+<script>
+var app = angular.module("myApp", []); // creating a module
+app.controller("myCtrl", function($scope) {
+    $scope.firstName = "Laya";
+    $scope.lastName = "babu";
+});
+</script>
+</body>
+</html>
